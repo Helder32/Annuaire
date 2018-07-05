@@ -138,7 +138,11 @@ var annuaire =
 },
 ];
 
+$("#annuaire").hide();
+
 for (var i = 0; i<annuaire.length; i++)
 {
   $(".table").append('<tr><td>'+annuaire[i].Nom+'</td><td>'+annuaire[i].Prenom+'</td><td>'+annuaire[i].Email+'</td><td>'+annuaire[i].téléphone+'</td></tr>');
 }
+
+
