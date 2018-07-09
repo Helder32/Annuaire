@@ -1,12 +1,12 @@
-var annuaire = 
-[
+//Variable avec les données du tableau
+var annuaire = [
 {
   Nom: 'Ahmed',
   Prenom: 'Dania',
   Email:'94daniak@live.fr',
   Ville: 'Auch',
   téléphone: '06.18.86.01.78'
-  
+
 },
 
 {
@@ -136,13 +136,48 @@ var annuaire =
   Ville: 'Castera-Verduzan',
   téléphone: '07.85.70.24.93'
 },
+
+{
+  Nom: 'Test',
+  Prenom: 'Test1',
+  Email:'test@orange.fr',
+  Ville: 'Auch',
+  téléphone: '07.85.70.24.93'
+}
 ];
 
-$("#annuaire").hide();
 
-for (var i = 0; i<annuaire.length; i++)
-{
+
+//Fonction pour rendre invisible les données du tableau :
+$(".table").hide();
+
+//Fonction pour afficher les données du tableau :
+for (var i = 0; i<annuaire.length; i++){
   $(".table").append('<tr><td>'+annuaire[i].Nom+'</td><td>'+annuaire[i].Prenom+'</td><td>'+annuaire[i].Email+'</td><td>'+annuaire[i].téléphone+'</td></tr>');
 }
+
+//fonction pour rechercher une donnée :
+$("#go").click(function(){
+  $(".table").show();
+  $(".table").empty();
+
+  for(i=0; i < annuaire.length;i++){
+    var trouver=$("#cherche").val().toUpperCase();
+    var comparer=annuaire[i].Nom.toUpperCase();
+    var comparer2=annuaire[i].Prenom.toUpperCase();
+
+      if (trouver==comparer || trouver==comparer2 ){   
+        $(".table").append('<tr><td>'+annuaire[i].Nom+'</td><td>'+annuaire[i].Prenom+'</td><td>'+annuaire[i].Email+'</td><td>'+annuaire[i].Ville+'</td><td>'+annuaire[i].téléphone+'</td></tr>');  
+      }
+  }  
+    if (trouver==false){
+      alert ( "je crois bien qu'il y a personne de ce nom..." );
+    }
+  //Pour remettre la valeur taper dans la barre de recherche à zéro :
+  $("#cherche").val(''); 
+  
+});
+
+
 
 

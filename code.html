@@ -3,58 +3,65 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Annuaire</title>
-	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
 </head>
 
 <body>
 
-	<div class="Titre">
+	<div id="title" class="Titre">
 		<h1>Annuaire</h1>    
 		<p>"si ça marche, tu trouveras peut-être ce que tu cherche..."</p>
 	</div>
 
-	<div class="btn-group">
-		<button type="button" class="btn btn-primary">Action</button>
-		<button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown">
-			<span class="caret"></span>
-		</button>
-		<div class="dropdown-menu">
-			<a class="dropdown-item" href="#">Nouveau contact</a>
-			<a class="dropdown-item" href="#">Modifier un contact</a>
-			<a class="dropdown-item" href="#">Suprimer un contact</a>
+	
 
-		</div>
-	</div> 
+	<!--Image----------------------------->
+	<div class="image" id="img">
+		<img src="imgredim.png" class="mx-auto d-block" style="width:100%"> 
 
-
-
-
-<!--
-<nav class="navbar navbar-inverse">
-	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="#">WebSiteName</a>
-		</div>
-		<ul class="nav navbar-nav">
-			<li class="active"><a href="#">Home</a></li>
-			<li><a href="#">Link</a></li>
-			<li><a href="#">Link</a></li>
-		</ul>
-		<button class="btn btn-danger navbar-btn">Button</button>
 	</div>
-</nav>
--->
-<div class="Données">
-	<table class="table">
-		<thead>
-			<th> Nom  </th>
-			<th> Prénom </th>
-			<th> Email  </th>
-			<th> Téléphone </th>
-		</thead>
-	</table>
-</div>
+
+
+	<!--Navbar-------------------------------------->
+	<nav class="navbar navbar-dark bg-dark">
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"  
+				aria-expanded="false">
+				Actions
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#annuaire">Nouveau contact</a>
+				<a class="dropdown-item" href="#annuaire">Modifier un contact</a>
+				<a class="dropdown-item" href="#annuaire">Supprimer un contact</a>
+			</div>
+		</div>
+		<a class="navbar-brand"></a>
+
+		<form class="form-inline">
+			<input id="cherche" class="form-control mr-sm-2" type="search" placeholder="Qui veut tu trouver ?" aria-label="Search" autocomplete="on">
+			<button id="go" class="btn btn-outline-success my-2 my-sm-0" type="submit">Go</button>
+		</form>
+	</nav>
+
+
+	
+
+	
+<!--Tableau --------------------------- -->
+	<div class="Données">
+		<table class="table">
+			<thead>
+				<th> Nom  </th>
+				<th> Prénom </th>
+				<th> Email  </th>
+				<th> Téléphone </th>
+			</thead>
+		</table>
+	</div>
+
+
+	
 
 
 
@@ -65,8 +72,13 @@
 
 
 
-<script type="text/javascript" src="bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="jquery.min.js"></script>
-<script type="text/javascript" src="code.js"></script>
+
+
+
+
+
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.bundle.js"></script>
+	<script src="code.js"></script>
 </body>
 </html>
